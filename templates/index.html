@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦃 Thanksgiving Recipe Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🦃 Thanksgiving Recipe Generator</h1>
+            <p class="subtitle">Get personalized Thanksgiving recipes based on your dietary preferences</p>
+        </div>
+        
+        <div class="form-container">
+            <form action="/generate-recipe" method="post" class="recipe-form">
+                <div class="input-group">
+                    <label for="api_key">OpenAI API Key</label>
+                    <input type="password" id="api_key" name="api_key" required 
+                           placeholder="Enter your OpenAI API key" class="api-input">
+                    <small class="help-text">Your API key is only used for this request and not stored</small>
+                </div>
+                
+                <div class="input-group">
+                    <label>Dietary Preferences</label>
+                    <div class="diet-options">
+                        <label class="diet-option">
+                            <input type="radio" name="diet_type" value="no_restrictions" checked>
+                            <span class="diet-card">
+                                <span class="diet-icon">🍖</span>
+                                <span class="diet-title">No Restrictions</span>
+                                <span class="diet-desc">Traditional Thanksgiving</span>
+                            </span>
+                        </label>
+                        
+                        <label class="diet-option">
+                            <input type="radio" name="diet_type" value="vegetarian">
+                            <span class="diet-card">
+                                <span class="diet-icon">🥗</span>
+                                <span class="diet-title">Vegetarian</span>
+                                <span class="diet-desc">No meat, dairy & eggs OK</span>
+                            </span>
+                        </label>
+                        
+                        <label class="diet-option">
+                            <input type="radio" name="diet_type" value="vegan">
+                            <span class="diet-card">
+                                <span class="diet-icon">🌱</span>
+                                <span class="diet-title">Vegan</span>
+                                <span class="diet-desc">No animal products</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="generate-btn">
+                    <span class="btn-text">Generate My Thanksgiving Recipe</span>
+                    <span class="btn-icon">✨</span>
+                </button>
+            </form>
+        </div>
+        
+        <div class="footer">
+            <p>Powered by GPT-4 • Made with ❤️ for Thanksgiving</p>
+        </div>
+    </div>
+</body>
+</html>

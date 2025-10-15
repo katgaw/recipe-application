@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❌ Error - Thanksgiving Recipe Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>❌ Oops! Something went wrong</h1>
+            <p class="subtitle">We couldn't generate your recipe</p>
+        </div>
+        
+        <div class="error-container">
+            <div class="error-content">
+                <div class="error-icon">⚠️</div>
+                <div class="error-message">
+                    {{ error }}
+                </div>
+                <div class="error-suggestions">
+                    <h3>Try these solutions:</h3>
+                    <ul>
+                        <li>Check that your OpenAI API key is correct</li>
+                        <li>Make sure you have sufficient API credits</li>
+                        <li>Verify your internet connection</li>
+                        <li>Try again in a few moments</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="/" class="btn-primary">
+                    <span class="btn-text">Try Again</span>
+                    <span class="btn-icon">🔄</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Powered by GPT-4 • Made with ❤️ for Thanksgiving</p>
+        </div>
+    </div>
+</body>
+</html>

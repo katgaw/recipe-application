@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦃 Your Thanksgiving Recipe</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🦃 Your Thanksgiving Recipe</h1>
+            <p class="subtitle">Perfect for your dietary preferences</p>
+        </div>
+        
+        <div class="recipe-container">
+            <div class="recipe-content">
+                <div class="recipe-header">
+                    <h2>Thanksgiving Dinner Menu</h2>
+                    <div class="diet-badge">
+                        {% if diet_type == "vegetarian" %}
+                            🥗 Vegetarian
+                        {% elif diet_type == "vegan" %}
+                            🌱 Vegan
+                        {% else %}
+                            🍖 Traditional
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="recipe-text">
+                    {{ recipe | safe }}
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="/" class="btn-secondary">
+                    <span class="btn-text">Generate Another Recipe</span>
+                    <span class="btn-icon">🔄</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Powered by GPT-4 • Made with ❤️ for Thanksgiving</p>
+        </div>
+    </div>
+</body>
+</html>
